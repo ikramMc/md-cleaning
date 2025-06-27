@@ -20,7 +20,7 @@ def basic_cleanup(text):
 
 def clean_markdown(content, regex_patterns, remove_ascii=False):
     for pattern in regex_patterns:
-        content = re.sub(pattern, '', content, flags=re.IGNORECASE | re.DOTALL)
+        content = re.sub(pattern, '', content, flags=re.IGNORECASE | re.MULTILINE)
 
     if remove_ascii:
         content = remove_non_ascii(content)
